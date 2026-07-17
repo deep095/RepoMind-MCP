@@ -1,5 +1,8 @@
 # RepoMind-MCP (v2.0)
 
+[![npm version](https://img.shields.io/npm/v/repomind-mcp.svg)](https://www.npmjs.com/package/repomind-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 An open-source Model Context Protocol (MCP) server that provides advanced repository mapping, local dependency graphing, and architectural diagram generation capabilities. Designed to run locally over stdio transport, it helps AI clients easily understand the codebase structures of JavaScript, TypeScript, and Python projects.
 
 ## v2.0 Features & Upgrades
