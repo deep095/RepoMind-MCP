@@ -74,9 +74,46 @@ npm start
 
 ## Configuration & Client Integration
 
-### Claude Desktop Integration
-Add the following configuration to your Claude Desktop configuration file (typically located at `%APPDATA%\Claude\claude_desktop_config.json` on Windows or `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+### Option A: Standard Release (via NPX or Global Install)
+For users who install your published package from the public npm registry.
 
+#### Using NPX (Recommended)
+Add the server directly to your Claude Desktop config without installing it beforehand:
+```json
+{
+  "mcpServers": {
+    "repomind-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "repomind-mcp"
+      ]
+    }
+  }
+}
+```
+
+#### Global Installation
+Install the package globally:
+```bash
+npm install -g repomind-mcp
+```
+Then reference it by command name:
+```json
+{
+  "mcpServers": {
+    "repomind-mcp": {
+      "command": "repomind-mcp",
+      "args": []
+    }
+  }
+}
+```
+
+### Option B: Local Development Integration
+For developing or running the server locally from this repository.
+
+Add this configuration (replace path in `args` with the absolute path of your compiled `dist/index.js` file):
 ```json
 {
   "mcpServers": {
@@ -87,8 +124,6 @@ Add the following configuration to your Claude Desktop configuration file (typic
   }
 }
 ```
-
-Make sure to replace the path in `args` with the absolute path of your compiled `dist/index.js` file.
 
 ---
 
